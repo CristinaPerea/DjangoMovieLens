@@ -1,0 +1,9 @@
+{% extends 'base.html'%}
+
+{% block contenido %}
+    <ul>
+    {% for pelicula in querySet %}
+        <a href="{% url peliculasDetalle pelicula.id_pelicula %}"><li>{{ pelicula.titulo }}</li></a>
+    {% endfor %}
+    </ul>
+{% endblock %}

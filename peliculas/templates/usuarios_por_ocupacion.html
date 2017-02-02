@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+{% block contenido %}
+    <ul>
+
+            {% for diccionario in resultados %}
+                <li>
+                {% for ocupacion, usuarios in diccionario.items %}
+                    <h1>{{ ocupacion }}</h1>
+                    <ul>
+                    {% for usuario in usuarios %}
+                        <li>{{ usuario.id_usuario }} | {{ usuario.edad }} | {{ usuario.codigo_postal }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endfor %}
+                </li>
+            {% endfor %}
+
+    </ul>
+{% endblock %}

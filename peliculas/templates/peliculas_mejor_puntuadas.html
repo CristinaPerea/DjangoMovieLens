@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+
+{% block contenido %}
+<h1>Peliculas Valoracion</h1>
+    {% for elem in querySet %}
+
+        <li>{{ elem}}</li>
+    {% endfor %}
+{% endblock %}
+
+
